@@ -1,0 +1,20 @@
+{
+  "name": "expence-tracker",
+  "version": "1.0.0",
+  "description": "A modern, full-stack expense tracking application built with React, Node.js, and MongoDB. Features a beautiful SaaS-style dashboard with real-time analytics, transaction management, and comprehensive financial insights.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

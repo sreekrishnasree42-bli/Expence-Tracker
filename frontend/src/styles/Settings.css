@@ -1,0 +1,122 @@
+/* Settings Page Styles - Minimal supplementary styles */
+
+/* Smooth transitions for all elements */
+.settings-container,
+.settings-card,
+.settings-section {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrolling for settings sections */
+.settings-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Ensure consistent spacing in dark mode */
+:root.dark {
+  color-scheme: dark;
+}
+
+body.dark .settings-section:not(:last-child) {
+  border-bottom-color: var(--gray-700);
+}
+
+.settings-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+body.dark .settings-section-title {
+  color: white;
+}
+
+.settings-section-description {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin: 0;
+  line-height: 1.5;
+}
+
+body.dark .settings-section-description {
+  color: var(--gray-400);
+}
+
+/* Settings Action Button */
+.settings-action-btn {
+  padding: 0.625rem 1rem;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  align-self: flex-start;
+}
+
+.settings-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.settings-action-btn:active {
+  transform: translateY(0);
+}
+
+/* Settings List */
+.settings-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.settings-list-item {
+  padding: 1rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.settings-list-item:hover {
+  background: white;
+  border-color: #2563eb;
+}
+
+body.dark .settings-list-item {
+  background: transparent;
+  border-color: transparent;
+}
+
+body.dark .settings-list-item:hover {
+  background: rgba(148, 163, 184, 0.12);
+  border-color: transparent;
+}
+
+.settings-list-item-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+body.dark .settings-list-item-label {
+  color: white;
+}
+
+.settings-list-item-value {
+  font-size: 0.8125rem;
+  color: var(--gray-600);
+  margin: 0.25rem 0 0 0;
+}
+
+body.dark .settings-list-item-value {
+  color: var(--gray-400);
+}
