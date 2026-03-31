@@ -206,16 +206,12 @@ const AppContent = () => {
           />
 
           <Route
-            path="/"
-            element={
-              isAuthenticated ? (
-                <Navigate to="/dashboard" replace />
-              ) : (
-                <Navigate to="/landing" replace />
-              )
-            }
-          />
-          <Route path="*" element={<Navigate to="/" replace />} />
+  path="/"
+  element={
+    isAuthenticated ? <Dashboard /> : <Login />
+  }
+/>
+          <Route path="*" element={<Login />} />
         </Routes>
       </motion.div>
     </AnimatePresence>
