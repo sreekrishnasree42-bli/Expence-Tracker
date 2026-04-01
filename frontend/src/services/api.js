@@ -2,8 +2,14 @@ import axios from 'axios';
 import { API_ENDPOINTS } from '../utils/constants';
 
 // Create axios instance
+const rawApiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const normalizedApiUrl = rawApiUrl.replace(/\/+$/, ''); // remove trailing slash
+const baseURL = normalizedApiUrl.endsWith('/api')
+  ? normalizedApiUrl
+  : `${normalizedApiUrl}/api`;
+
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL,
   headers: {
     'Content-Type': 'application/json',
   },
